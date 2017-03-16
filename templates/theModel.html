@@ -5,21 +5,23 @@
     </head>
     <body>
         <!--  for loop here for tables of old guesses and the clues -->
-        <table align="center">
-            <tr>
-                <td id="leftClue">l</td>
-                <td class="guessBorderColumn">|</td>
-                <td id="oldGuessAt0">a</td>
-                <td class="guessBorderColumn">|</td>
-                <td id="oldGuessAt1">b</td>
-                <td class="guessBorderColumn">|</td>
-                <td id="oldGuessAt2">c</td>
-                <td class="guessBorderColumn">|</td>
-                <td id="oldGessAt3">d</td>
-                <td class="guessBorderColumn">|</td>
-                <td id="rightClue">r</td>
-            </tr>
-        </table>
+        {% for anOldGuess in listOfOldGuesses %}
+            <table align="center">
+                <tr>
+                    <td id="leftClue">{{clues}}</td>
+                    <td class="guessBorderColumn">|</td>
+                    <td id="oldGuessAt0">{{anOldGuess.guess0}}</td>
+                    <td class="guessBorderColumn">|</td>
+                    <td id="oldGuessAt1">{{anOldGuess.guess1}}</td>
+                    <td class="guessBorderColumn">|</td>
+                    <td id="oldGuessAt2">{{anOldGuess.guess2}}</td>
+                    <td class="guessBorderColumn">|</td>
+                    <td id="oldGessAt3">{{anOldGuess.guess3}}</td>
+                    <td class="guessBorderColumn">|</td>
+                    <td id="rightClue"></td>
+                </tr>
+            </table>
+        {% endfor %}
 
         <form method="post">
 
@@ -51,5 +53,8 @@
                 </tr>
             </table>
         </form>
+        <div class="getRidOfThis">
+            {{theAnswerList}}
+        </div>
     </body>
     </html>
