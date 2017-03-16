@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rake</title>
+    </head>
+    <body>
+        <!--  for loop here for tables of old guesses and the clues -->
+        <table align="center">
+            <tr>
+                <td id="leftClue">l</td>
+                <td class="guessBorderColumn">|</td>
+                <td id="oldGuessAt0">a</td>
+                <td class="guessBorderColumn">|</td>
+                <td id="oldGuessAt1">b</td>
+                <td class="guessBorderColumn">|</td>
+                <td id="oldGuessAt2">c</td>
+                <td class="guessBorderColumn">|</td>
+                <td id="oldGessAt3">d</td>
+                <td class="guessBorderColumn">|</td>
+                <td id="rightClue">r</td>
+            </tr>
+        </table>
+
+        <form method="post">
+
+            <table align="center">
+                <tr>
+                    <td id="guessAt0">
+                        <input type="text" size="1" name="guessAt0" value="{{guessAt0}}"/>
+                    </td>
+                    <td class="guessBorderColumn">|</td>
+                    <td id="guessAt1">
+                        <input type="text" size="1" name="guessAt1" value="{{guessAt1}}"/>
+                    </td>
+                    <td class="guessBorderColumn">|</td>
+                    <td id="guessAt2">
+                        <input type="text" size="1" name="guessAt2" value="{{guessAt2}}"/>
+                    </td>
+                    <td class="guessBorderColumn">|</td>
+                    <td id="guessAt3">
+                        <input type="text" size="1" name="guessAt3" value="{{guessAt3}}"/>
+                    </td>
+                </tr>
+            </table>
+            <table align="center">
+                <tr>
+                    <td id="guessSubmit">
+                        <input type="submit"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+    </html>
